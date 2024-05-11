@@ -12,7 +12,7 @@ function PersonalForm({ personal, onSubmit }) {
     <form>
       <FormInput
         type="text"
-        id={name + '_fullname'}
+        id={name + '_fullName'}
         value={personal.data.fullName}
         label="Full name"
         onChange={personal.changeName}
@@ -26,10 +26,17 @@ function PersonalForm({ personal, onSubmit }) {
       />
       <FormInput
         type="text"
-        id={name + '_email'}
+        id={name + 'phoneNumber'}
         value={personal.data.phoneNumber}
         label="Phone number"
         onChange={personal.changePhone}
+      />
+      <FormInput
+        type="text"
+        id={name + 'location'}
+        value={personal.data.location}
+        label="Location"
+        onChange={personal.changeLocation}
       />
       <button onClick={handleSubmit}>Submit</button>
     </form>

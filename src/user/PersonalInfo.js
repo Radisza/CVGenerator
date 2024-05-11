@@ -5,6 +5,7 @@ function Personal() {
     fullName: '',
     email: '',
     phoneNumber: '',
+    location: '',
   });
 
   function changeName(event_data) {
@@ -22,11 +23,17 @@ function Personal() {
     setPersonalData(new_person);
   }
 
+  function changeLocation(event_data) {
+    const new_person = { ...data, location: event_data.target.value };
+    setPersonalData(new_person);
+  }
+
   return {
     data,
     changeName,
     changeEmail,
     changePhone,
+    changeLocation,
   };
 }
 
