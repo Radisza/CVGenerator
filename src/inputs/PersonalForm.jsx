@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import FormInput from './FormInput';
 
 function PersonalForm({ personal, onSubmit }) {
   const handleSubmit = (e) => {
@@ -9,23 +10,23 @@ function PersonalForm({ personal, onSubmit }) {
   const name = 'personal';
   return (
     <form>
-      <input
+      <FormInput
         type="text"
-        name={name + '_fullname'}
+        id={name + '_fullname'}
         value={personal.data.fullName}
         label="Full name"
         onChange={personal.changeName}
       />
-      <input
+      <FormInput
         type="text"
-        name={name + '_email'}
+        id={name + '_email'}
         value={personal.data.email}
-        label="e-mail"
+        label="E-mail"
         onChange={personal.changeEmail}
       />
-      <input
+      <FormInput
         type="text"
-        name={name + '_email'}
+        id={name + '_email'}
         value={personal.data.phoneNumber}
         label="Phone number"
         onChange={personal.changePhone}

@@ -56,3 +56,12 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
+.formInput {
+  display: block;
+  padding: 4px;
+}
+
+.formInput > input {
+  width: 100%;
+}
