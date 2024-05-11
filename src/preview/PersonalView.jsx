@@ -1,11 +1,26 @@
 import PropTypes from 'prop-types';
+import { Icon } from '@iconify/react';
+
+function IconText({ icon, content }) {
+  return (
+    <div className="textWithIcon">
+      <Icon className="icon" icon={icon} />
+      <div>{content}</div>
+    </div>
+  );
+}
+
+IconText.propTypes = {
+  icon: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+};
 
 function PersonalView({ personal }) {
   return (
     <div>
-      <div>{personal.data.fullName}</div>
-      <div>{personal.data.email}</div>
-      <div>{personal.data.phoneNumber}</div>
+      <div className="title">{personal.data.fullName}</div>
+      <IconText icon="mdi-phone" content={personal.data.phoneNumber} />
+      <IconText icon="mdi-alternate-email" content={personal.data.email} />
     </div>
   );
 }

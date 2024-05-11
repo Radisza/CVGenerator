@@ -65,3 +65,17 @@
 .formInput > input {
   width: 100%;
 }
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.textWithIcon {
+  display: flex;
+  gap: 8px;
+}
+
+.icon {
+  padding-top: 2px;
+}
