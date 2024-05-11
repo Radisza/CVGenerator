@@ -29,4 +29,21 @@
   width: 210mm;
   height: 270mm;
   border: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.CVLeft,
+.CVRight {
+  padding: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.CVLeft {
+  background-color: lightblue;
+  border-right: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
