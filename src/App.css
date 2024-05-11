@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 16px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.mainPanel {
+  background-color: rgb(176, 176, 176);
+  box-shadow: 8px 0 10px -10px black;
+  height: 100%;
+  width: 100%;
+  padding: 8px;
+}
+
+.preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CV {
+  width: 210mm;
+  height: 270mm;
+  border: 1px solid black;
+}
