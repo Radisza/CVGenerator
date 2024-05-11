@@ -47,3 +47,12 @@
   flex-direction: column;
   gap: 16px;
 }
+
+.formItem {
+  padding: 16px;
+  background-color: lightgrey;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
