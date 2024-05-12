@@ -1,12 +1,21 @@
 import { useState } from 'react';
 
 function Personal() {
-  const [data, setPersonalData] = useState({
-    fullName: '',
-    email: '',
-    phoneNumber: '',
-    location: '',
-  });
+  const getData = ({
+    fullName = '',
+    email = '',
+    phoneNumber = '',
+    location = '',
+  }) => {
+    return {
+      fullName: fullName,
+      email: email,
+      phoneNumber: phoneNumber,
+      location: location,
+    };
+  };
+
+  const [data, setPersonalData] = useState(getData({}));
 
   function changeName(event_data) {
     const new_person = { ...data, fullName: event_data.target.value };
@@ -28,12 +37,22 @@ function Personal() {
     setPersonalData(new_person);
   }
 
+  function setNewData(obj) {
+    setPersonalData(getData(obj));
+  }
+
+  function clearData() {
+    setPersonalData(getData({}));
+  }
+
   return {
     data,
     changeName,
     changeEmail,
     changePhone,
     changeLocation,
+    setNewData,
+    clearData,
   };
 }
 
