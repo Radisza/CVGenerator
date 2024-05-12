@@ -2,6 +2,9 @@ import PropTypes from 'prop-types';
 import { Icon } from '@iconify/react';
 
 function IconText({ icon, content }) {
+  if (!content) {
+    return;
+  }
   return (
     <div className="textWithIcon">
       <Icon className="icon" icon={icon} />
