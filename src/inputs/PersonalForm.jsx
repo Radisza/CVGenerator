@@ -1,12 +1,7 @@
 import PropTypes from 'prop-types';
 import FormInput from './FormInput';
 
-function PersonalForm({ personal, onSubmit }) {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSubmit();
-  };
-
+function PersonalForm({ personal }) {
   const name = 'personal';
   return (
     <form>
@@ -38,14 +33,12 @@ function PersonalForm({ personal, onSubmit }) {
         label="Location"
         onChange={personal.changeLocation}
       />
-      <button onClick={handleSubmit}>Submit</button>
     </form>
   );
 }
 
 PersonalForm.propTypes = {
   personal: PropTypes.object.isRequired,
-  onSubmit: PropTypes.func.isRequired,
 };
 
 export default PersonalForm;

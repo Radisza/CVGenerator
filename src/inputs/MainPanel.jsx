@@ -56,9 +56,7 @@ function MainPanel({ personal }) {
       </div>
       <FormItem
         name={personal.data.fullName || 'Personal data'}
-        renderForm={(onSubmit) => (
-          <PersonalForm personal={personal} onSubmit={onSubmit} />
-        )}
+        form={<PersonalForm personal={personal} />}
       />
     </div>
   );
