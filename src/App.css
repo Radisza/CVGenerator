@@ -48,6 +48,12 @@
   gap: 16px;
 }
 
+.CVBox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .formItem {
   padding: 16px;
   background-color: lightgrey;
@@ -69,6 +75,7 @@
 .title {
   font-size: 1.5rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .textWithIcon {
@@ -77,9 +84,9 @@
 }
 
 .icon {
-  padding-top: 2px;
+  font-size: 1.3rem;
 }
 
 button {
-  padding: 8px;
+  padding: 4px;
 }
