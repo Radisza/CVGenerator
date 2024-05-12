@@ -1,3 +1,4 @@
+import EditBtn from '../utils/buttons';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -10,7 +11,7 @@ function FormItem({ name, renderForm }) {
   return (
     <div className="formItem">
       <div>{name}</div>
-      <button onClick={() => setActive(true)}>Edit</button>
+      <EditBtn onClick={() => setActive(true)} />
     </div>
   );
 }
