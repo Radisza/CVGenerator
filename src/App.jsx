@@ -5,6 +5,8 @@ import Languages from './user/Languages';
 import Skills from './user/Skills';
 import Experience from './user/Experience';
 import Education from './user/Education';
+import Tools from './user/Tools';
+
 import { usePDF } from 'react-to-pdf';
 import './App.css';
 
@@ -14,6 +16,7 @@ function App() {
   const experience = Experience();
   const education = Education();
   const skills = Skills();
+  const tools = Tools();
 
   const pdfOptions = {
     filename: 'cv.pdf',
@@ -37,6 +40,7 @@ function App() {
         experience={experience}
         education={education}
         skills={skills}
+        tools={tools}
         toPdf={toPDF}
       />
       <Preview
@@ -45,6 +49,7 @@ function App() {
         experience={experience}
         education={education}
         skills={skills}
+        tools={tools}
         cvRef={targetRef}
       />
     </div>

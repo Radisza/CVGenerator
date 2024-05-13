@@ -25,7 +25,6 @@ Skill.propTypes = {
 };
 
 function SkillsView({ skills }) {
-  console.log(skills.data);
   return (
     <div className="flex-column">
       {skills.data.length > 0 && (

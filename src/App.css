@@ -140,6 +140,9 @@ button {
 
 .descriptionView {
   grid-column: span 2;
-  margin-left: 15%;
   margin-bottom: 16px;
+}
+
+li {
+  margin-left: 15%;
 }

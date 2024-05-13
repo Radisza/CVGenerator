@@ -62,5 +62,6 @@
       "skill": "Python",
       "level": "5"
     }
-  ]
+  ],
+  "tools": ["Sous-vide", "Slow cooking", "Grill", "Fusion kitchen"]
 }

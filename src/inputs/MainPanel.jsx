@@ -6,6 +6,7 @@ import ExperienceForm from './ExperienceForm';
 import PropTypes from 'prop-types';
 import EducationForm from './EducationForm';
 import SkillsForm from './SkillsForm';
+import ToolsForm from './ToolsForm';
 
 function MainPanel({
   personal,
@@ -13,6 +14,7 @@ function MainPanel({
   experience,
   education,
   skills,
+  tools,
   toPdf,
 }) {
   const setUserData = (data) => {
@@ -21,6 +23,7 @@ function MainPanel({
     experience.setNewData(data.experience);
     education.setNewData(data.education);
     skills.setNewData(data.skills);
+    tools.setNewData(data.tools);
   };
 
   const handleLoadExample = async ({ src = '/example.json' }) => {
@@ -56,6 +59,7 @@ function MainPanel({
     experience.clearData();
     education.clearData();
     skills.clearData();
+    tools.clearData();
   };
 
   return (
@@ -99,6 +103,10 @@ function MainPanel({
         items={skills}
         generateForm={(skill) => <SkillsForm obj={skills} toRender={skill} />}
       />
+      <FormBox
+        items={tools}
+        generateForm={(tool) => <ToolsForm obj={tools} toRender={tool} />}
+      />
     </div>
   );
 }
@@ -109,6 +117,7 @@ MainPanel.propTypes = {
   experience: PropTypes.object.isRequired,
   education: PropTypes.object.isRequired,
   skills: PropTypes.object.isRequired,
+  tools: PropTypes.object.isRequired,
   toPdf: PropTypes.func.isRequired,
 };
 

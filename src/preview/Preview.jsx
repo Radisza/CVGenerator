@@ -3,6 +3,7 @@ import LanguagesView from './LanguagesView';
 import ExperienceView from './ExperienceView';
 import EducationView from './EducationView';
 import SkillsView from './SkillsView';
+import ToolsView from './ToolsView';
 import PropTypes from 'prop-types';
 
 function Preview({
@@ -11,6 +12,7 @@ function Preview({
   experience,
   education,
   skills,
+  tools,
   cvRef,
 }) {
   return (
@@ -20,6 +22,7 @@ function Preview({
           <PersonalView personal={personal} />
           <LanguagesView languages={languages} />
           <SkillsView skills={skills} />
+          <ToolsView tools={tools} />
         </div>
         <div className="CVRight">
           <ExperienceView experience={experience} />
@@ -36,6 +39,7 @@ Preview.propTypes = {
   experience: PropTypes.object.isRequired,
   education: PropTypes.object.isRequired,
   skills: PropTypes.object.isRequired,
+  tools: PropTypes.object.isRequired,
   cvRef: PropTypes.object.isRequired,
 };
 
