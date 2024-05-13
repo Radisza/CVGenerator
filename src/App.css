@@ -36,10 +36,10 @@
 
 .CV {
   width: 210mm;
-  height: 270mm;
-  border: 1px solid black;
+  height: 297mm;
   display: grid;
   grid-template-columns: 1fr 3fr;
+  box-shadow: 0 0 5px darkgray;
 }
 
 .CVLeft,

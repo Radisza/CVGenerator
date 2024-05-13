@@ -7,7 +7,14 @@ import PropTypes from 'prop-types';
 import EducationForm from './EducationForm';
 import SkillsForm from './SkillsForm';
 
-function MainPanel({ personal, languages, experience, education, skills }) {
+function MainPanel({
+  personal,
+  languages,
+  experience,
+  education,
+  skills,
+  toPdf,
+}) {
   const setUserData = (data) => {
     personal.setNewData(data.personal);
     languages.setNewData(data.languages);
@@ -67,6 +74,7 @@ function MainPanel({ personal, languages, experience, education, skills }) {
           multiple={false}
         />
       </div>
+      <button onClick={toPdf}>Download PDF</button>
       <FormItem
         name={personal.data.fullName || 'Personal data'}
         form={<PersonalForm personal={personal} />}
@@ -101,6 +109,7 @@ MainPanel.propTypes = {
   experience: PropTypes.object.isRequired,
   education: PropTypes.object.isRequired,
   skills: PropTypes.object.isRequired,
+  toPdf: PropTypes.func.isRequired,
 };
 
 export default MainPanel;
