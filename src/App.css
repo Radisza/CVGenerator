@@ -126,6 +126,12 @@ button {
   gap: 8px;
 }
 
+.twoColumnsBoxRight {
+  display: grid;
+  grid-template-columns: fit-content(40%) auto;
+  gap: 8px;
+}
+
 .dots {
   display: flex;
   justify-content: space-evenly;
@@ -134,4 +140,9 @@ button {
 
 .centered {
   text-align: center;
+}
+
+.descriptionView {
+  grid-column: span 2;
+  margin-left: 15%;
 }

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import DescriptionView from './DescriptionView';
 
 function EducationView({ education }) {
   const items = [];
@@ -15,8 +16,13 @@ function EducationView({ education }) {
       <div className="flex-column" key={`right-${item.id}`}>
         <div className="bold">{item.schoolName}</div>
         <div className="bold">Profile: {item.profile}</div>
-        <div>{item.description}</div>
       </div>
+    );
+    items.push(
+      <DescriptionView
+        key={`description_${item.id}`}
+        description={item.description}
+      />
     );
   }
 
@@ -25,7 +31,7 @@ function EducationView({ education }) {
       {education.data.length > 0 && (
         <div className="middle-title">{education.getName()}</div>
       )}
-      <div className="twoColumnsBox">{items}</div>
+      <div className="twoColumnsBoxRight">{items}</div>
     </div>
   );
 }
