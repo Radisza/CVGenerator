@@ -53,6 +53,16 @@
 }
 
 .CVLeft {
+  justify-content: space-between;
+}
+
+.CVLeft > * {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.CVLeft {
   background-color: rgb(191, 236, 236);
 }
 

@@ -63,5 +63,11 @@
       "level": "5"
     }
   ],
-  "tools": ["Sous-vide", "Slow cooking", "Grill", "Fusion kitchen"]
+  "tools": ["Sous-vide", "Slow cooking", "Grill", "Fusion kitchen"],
+  "links": [
+    {
+      "icon": "mdi-github",
+      "url": "https://github.com/"
+    }
+  ]
 }

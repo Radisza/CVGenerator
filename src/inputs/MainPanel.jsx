@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import EducationForm from './EducationForm';
 import SkillsForm from './SkillsForm';
 import ToolsForm from './ToolsForm';
+import LinksForm from './LinksForm';
 
 function MainPanel({
   personal,
@@ -15,6 +16,7 @@ function MainPanel({
   education,
   skills,
   tools,
+  links,
   toPdf,
 }) {
   const setUserData = (data) => {
@@ -24,6 +26,7 @@ function MainPanel({
     education.setNewData(data.education);
     skills.setNewData(data.skills);
     tools.setNewData(data.tools);
+    links.setNewData(data.links);
   };
 
   const handleLoadExample = async ({ src = '/example.json' }) => {
@@ -60,6 +63,7 @@ function MainPanel({
     education.clearData();
     skills.clearData();
     tools.clearData();
+    links.clearData();
   };
 
   return (
@@ -107,6 +111,10 @@ function MainPanel({
         items={tools}
         generateForm={(tool) => <ToolsForm obj={tools} toRender={tool} />}
       />
+      <FormBox
+        items={links}
+        generateForm={(link) => <LinksForm obj={links} toRender={link} />}
+      />
     </div>
   );
 }
@@ -118,6 +126,7 @@ MainPanel.propTypes = {
   education: PropTypes.object.isRequired,
   skills: PropTypes.object.isRequired,
   tools: PropTypes.object.isRequired,
+  links: PropTypes.object.isRequired,
   toPdf: PropTypes.func.isRequired,
 };
 
