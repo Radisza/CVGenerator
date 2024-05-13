@@ -60,7 +60,7 @@ function MainPanel({
 
   return (
     <div className="mainPanel">
-      <div className="mainPanelButtons">
+      <div className="separated">
         <button onClick={handleLoadExample}> Load example </button>
         <button onClick={handleClear}>Clear all</button>
       </div>

@@ -11,8 +11,8 @@ function Skill({ skill, level, maxLevel }) {
     level_dots.push(<Icon icon={icon} key={`level_${i}`} />);
   }
   return (
-    <div className="flex-column">
-      <div className="centered">{skill}</div>
+    <div className="separated">
+      <div>{skill}</div>
       <div className="dots">{level_dots}</div>
     </div>
   );

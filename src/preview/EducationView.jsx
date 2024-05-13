@@ -5,7 +5,7 @@ function EducationView({ education }) {
   const items = [];
   for (const item of education.data) {
     items.push(
-      <div className="flex-column" key={`left-${item.id}`}>
+      <div key={`left-${item.id}`}>
         <div>
           {item.since} - {item.until}
         </div>
@@ -13,9 +13,9 @@ function EducationView({ education }) {
       </div>
     );
     items.push(
-      <div className="flex-column" key={`right-${item.id}`}>
+      <div key={`right-${item.id}`}>
         <div className="bold">{item.schoolName}</div>
-        <div className="bold">Profile: {item.profile}</div>
+        <div className="bold">{item.profile}</div>
       </div>
     );
     items.push(
@@ -29,7 +29,7 @@ function EducationView({ education }) {
   return (
     <div className="flex-column">
       {education.data.length > 0 && (
-        <div className="middle-title">{education.getName()}</div>
+        <div className="big-title">{education.getName()}</div>
       )}
       <div className="twoColumnsBoxRight">{items}</div>
     </div>

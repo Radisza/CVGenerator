@@ -22,7 +22,7 @@
   gap: 8px;
 }
 
-.mainPanelButtons {
+.separated {
   display: flex;
   gap: 8px;
   justify-content: space-between;
@@ -47,14 +47,13 @@
   padding: 8px;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .CVLeft {
-  background-color: lightblue;
-  border-right: 1px solid blue;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  background-color: rgb(191, 236, 236);
 }
 
 .flex-column {
@@ -93,18 +92,14 @@
 }
 
 .title,
-.big-title,
-.middle-title {
+.big-title {
   font-weight: 700;
   text-align: center;
+  margin: 8px 0;
 }
 
 .big-title {
   font-size: 1.5rem;
-}
-
-.middle-title {
-  font-size: 1.3rem;
 }
 
 .textWithIcon {
@@ -129,13 +124,14 @@ button {
 .twoColumnsBoxRight {
   display: grid;
   grid-template-columns: fit-content(40%) auto;
-  gap: 8px;
+  gap: 16px;
 }
 
 .dots {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: right;
   font-size: 1rem;
+  margin-bottom: 4px;
 }
 
 .centered {
@@ -145,4 +141,5 @@ button {
 .descriptionView {
   grid-column: span 2;
   margin-left: 15%;
+  margin-bottom: 16px;
 }

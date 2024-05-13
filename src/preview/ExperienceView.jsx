@@ -6,16 +6,12 @@ function ExperienceView({ experience }) {
   for (const item of experience.data) {
     items.push(
       <div key={`left-${item.id}`}>
-        <div>
-          {item.since} - {item.until}
-        </div>
+        {item.since} - {item.until}
       </div>
     );
     items.push(
-      <div key={`right-${item.id}`}>
-        <div className="bold">
-          {item.company}, {item.jobTitle}
-        </div>
+      <div key={`right-${item.id}`} className="bold">
+        {item.company}, {item.jobTitle}
       </div>
     );
     items.push(
@@ -29,7 +25,7 @@ function ExperienceView({ experience }) {
   return (
     <div className="flex-column">
       {experience.data.length > 0 && (
-        <div className="middle-title">{experience.getName()}</div>
+        <div className="big-title">{experience.getName()}</div>
       )}
       <div className="twoColumnsBoxRight">{items}</div>
     </div>
