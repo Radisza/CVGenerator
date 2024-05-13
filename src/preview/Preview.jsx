@@ -1,8 +1,9 @@
 import PersonalView from './PersonalView';
 import LanguagesView from './LanguagesView';
+import ExperienceView from './ExperienceView';
 import PropTypes from 'prop-types';
 
-function Preview({ personal, languages }) {
+function Preview({ personal, languages, experience }) {
   return (
     <div className="preview">
       <div className="CV">
@@ -10,7 +11,9 @@ function Preview({ personal, languages }) {
           <PersonalView personal={personal} />
           <LanguagesView languages={languages} />
         </div>
-        <div className="CVRight">Right</div>
+        <div className="CVRight">
+          <ExperienceView experience={experience} />
+        </div>
       </div>
     </div>
   );
@@ -19,6 +22,7 @@ function Preview({ personal, languages }) {
 Preview.propTypes = {
   personal: PropTypes.object.isRequired,
   languages: PropTypes.object.isRequired,
+  experience: PropTypes.object.isRequired,
 };
 
 export default Preview;

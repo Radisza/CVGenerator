@@ -19,15 +19,6 @@ function Languages() {
     setData([...data, newLanguage(language, level)]);
   }
 
-  function hasId(id) {
-    for (const entry of data) {
-      if (entry.id == id) {
-        return true;
-      }
-    }
-    return false;
-  }
-
   function removeEntry(id) {
     setData(
       data.filter((item) => {
@@ -84,7 +75,6 @@ function Languages() {
     changeLanguage,
     changeLevel,
     addNewEntry,
-    hasId,
     removeEntry,
     getName,
     getObjDescription,

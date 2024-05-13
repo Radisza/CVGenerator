@@ -88,14 +88,23 @@
   width: 100%;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .title,
-.big-title {
+.big-title,
+.middle-title {
   font-weight: 700;
   text-align: center;
 }
 
 .big-title {
   font-size: 1.5rem;
+}
+
+.middle-title {
+  font-size: 1.3rem;
 }
 
 .textWithIcon {
@@ -111,7 +120,7 @@ button {
   padding: 4px;
 }
 
-.languagesBox {
+.twoColumnsBox {
   display: grid;
   grid-template-columns: auto auto;
   gap: 8px;

@@ -16,7 +16,7 @@ function LanguagesView({ languages }) {
   return (
     <div className="flex-column">
       {languages.data.length > 0 && <div className="title">Languages</div>}
-      <div className="languagesBox">{lang_items}</div>
+      <div className="twoColumnsBox">{lang_items}</div>
     </div>
   );
 }

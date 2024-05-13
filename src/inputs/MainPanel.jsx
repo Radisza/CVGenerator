@@ -2,12 +2,14 @@ import FormBox from './FormBox';
 import FormItem from './FormItem';
 import PersonalForm from './PersonalForm';
 import LanguageForm from './LanguageForm';
+import ExperienceForm from './ExperienceForm';
 import PropTypes from 'prop-types';
 
-function MainPanel({ personal, languages }) {
+function MainPanel({ personal, languages, experience }) {
   const setUserData = (data) => {
     personal.setNewData(data.personal);
     languages.setNewData(data.languages);
+    experience.setNewData(data.experience);
   };
 
   const handleLoadExample = async ({ src = '/example.json' }) => {
@@ -40,6 +42,7 @@ function MainPanel({ personal, languages }) {
   const handleClear = () => {
     personal.clearData();
     languages.clearData();
+    experience.clearData();
   };
 
   return (
@@ -65,7 +68,13 @@ function MainPanel({ personal, languages }) {
       <FormBox
         items={languages}
         generateForm={(language) => (
-          <LanguageForm obj={languages} languageToRender={language} />
+          <LanguageForm obj={languages} toRender={language} />
+        )}
+      />
+      <FormBox
+        items={experience}
+        generateForm={(exp) => (
+          <ExperienceForm obj={experience} toRender={exp} />
         )}
       />
     </div>
@@ -75,6 +84,7 @@ function MainPanel({ personal, languages }) {
 MainPanel.propTypes = {
   personal: PropTypes.object.isRequired,
   languages: PropTypes.object.isRequired,
+  experience: PropTypes.object.isRequired,
 };
 
 export default MainPanel;
