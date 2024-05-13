@@ -21,7 +21,7 @@ function Preview({
     <div className="preview">
       <div ref={cvRef} className="CV">
         <div className="CVLeft">
-          <div>
+          <div className="mainContent">
             <PersonalView personal={personal} />
             <LanguagesView languages={languages} />
             <SkillsView skills={skills} />
@@ -32,8 +32,14 @@ function Preview({
           </div>
         </div>
         <div className="CVRight">
-          <ExperienceView experience={experience} />
-          <EducationView education={education} />
+          <div className="mainContent">
+            <ExperienceView experience={experience} />
+            <EducationView education={education} />
+          </div>
+          <div className="centered">
+            <div>CV generated with my project</div>
+            <div>https://github.com/Radisza/CVGenerator</div>
+          </div>
         </div>
       </div>
     </div>

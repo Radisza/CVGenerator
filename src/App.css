@@ -49,14 +49,10 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 32px;
-}
-
-.CVLeft {
   justify-content: space-between;
 }
 
-.CVLeft > * {
+.mainContent {
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -153,6 +149,7 @@ button {
   margin-bottom: 16px;
 }
 
-li {
+li,
+.withMargin {
   margin-left: 15%;
 }

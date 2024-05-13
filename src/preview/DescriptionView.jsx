@@ -7,7 +7,7 @@ function DescriptionView({ description, separator = '$$$' }) {
     case 0:
       return;
     case 1:
-      return <div className="descriptionView">{description}</div>;
+      return <div className="descriptionView withMargin">{description}</div>;
     default:
       return (
         <ul className="descriptionView">
