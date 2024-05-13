@@ -34,5 +34,23 @@
       "until": "01/01/2005",
       "description": "Setting up workstations with all needed ingredients and cooking equipment. Preparing ingredients to use in cooking (chopping and peeling vegetables, cutting meat etc.). Cooking food in various utensils or grillers."
     }
+  ],
+  "education": [
+    {
+      "schoolName": "HighSchool A",
+      "profile": "Math and IT",
+      "since": "01/07/1992",
+      "until": "27/06/1995",
+      "description": "",
+      "location": "Miami, Floryda"
+    },
+    {
+      "schoolName": "Harvard University",
+      "profile": "Math and IT",
+      "since": "01/07/1996",
+      "until": "27/06/2000",
+      "description": "Harvard University is devoted to excellence in teaching, learning, and research, and to developing leaders who make a difference globally.",
+      "location": "Cambridge, United States"
+    }
   ]
 }

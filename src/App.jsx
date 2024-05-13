@@ -5,11 +5,13 @@ import Languages from './user/Languages';
 
 import './App.css';
 import Experience from './user/Experience';
+import Education from './user/Education';
 
 function App() {
   const personal = Personal();
   const languages = Languages();
   const experience = Experience();
+  const education = Education();
 
   return (
     <div className="content">
@@ -17,11 +19,13 @@ function App() {
         personal={personal}
         languages={languages}
         experience={experience}
+        education={education}
       />
       <Preview
         personal={personal}
         languages={languages}
         experience={experience}
+        education={education}
       />
     </div>
   );
