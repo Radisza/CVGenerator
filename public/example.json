@@ -4,5 +4,19 @@
     "email": "kowalski@gmail.com",
     "phoneNumber": "+48 111 111 111",
     "location": "Drezno, Germany"
-  }
+  },
+  "languages": [
+    {
+      "language": "Polish",
+      "level": "Native"
+    },
+    {
+      "language": "English",
+      "level": "C2"
+    },
+    {
+      "language": "Germany",
+      "level": "A2"
+    }
+  ]
 }

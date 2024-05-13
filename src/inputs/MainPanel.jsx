@@ -1,10 +1,13 @@
+import FormBox from './FormBox';
 import FormItem from './FormItem';
 import PersonalForm from './PersonalForm';
+import LanguageForm from './LanguageForm';
 import PropTypes from 'prop-types';
 
-function MainPanel({ personal }) {
+function MainPanel({ personal, languages }) {
   const setUserData = (data) => {
     personal.setNewData(data.personal);
+    languages.setNewData(data.languages);
   };
 
   const handleLoadExample = async ({ src = '/example.json' }) => {
@@ -36,6 +39,7 @@ function MainPanel({ personal }) {
 
   const handleClear = () => {
     personal.clearData();
+    languages.clearData();
   };
 
   return (
@@ -58,12 +62,19 @@ function MainPanel({ personal }) {
         name={personal.data.fullName || 'Personal data'}
         form={<PersonalForm personal={personal} />}
       />
+      <FormBox
+        items={languages}
+        generateForm={(language) => (
+          <LanguageForm obj={languages} languageToRender={language} />
+        )}
+      />
     </div>
   );
 }
 
 MainPanel.propTypes = {
   personal: PropTypes.object.isRequired,
+  languages: PropTypes.object.isRequired,
 };
 
 export default MainPanel;

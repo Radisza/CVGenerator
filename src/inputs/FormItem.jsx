@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 function FormItem({ name, form }) {
   const [isActive, setActive] = useState(false);
-
   if (isActive) {
     return (
       <div className="formItem">
