@@ -55,7 +55,14 @@
 .mainContent {
   display: flex;
   flex-direction: column;
+}
+
+.CVLeft > .mainContent {
   gap: 32px;
+}
+
+.CVRight > .mainContent {
+  gap: 16px;
 }
 
 .CVLeft {

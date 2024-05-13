@@ -37,8 +37,11 @@ function Preview({
             <EducationView education={education} />
           </div>
           <div className="centered">
-            <div>CV generated with my project</div>
-            <div>https://github.com/Radisza/CVGenerator</div>
+            <div>
+              I hereby give consent for my personal data to be processed by
+              NAZWA FIRMY for the purpose of conducting recruitment for the
+              position for which I am applying.
+            </div>
           </div>
         </div>
       </div>
