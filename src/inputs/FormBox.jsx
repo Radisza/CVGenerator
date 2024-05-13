@@ -29,7 +29,7 @@ function Content({ items, generateForm }) {
         return (
           <FormItem
             key={item.id}
-            name={items.getObjDescription(item.id) || 'New language'}
+            name={items.getObjDescription(item.id) || 'New item'}
             form={generateForm(item)}
           />
         );

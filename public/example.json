@@ -52,5 +52,15 @@
       "description": "Harvard University is devoted to excellence in teaching, learning, and research, and to developing leaders who make a difference globally.",
       "location": "Cambridge, United States"
     }
+  ],
+  "skills": [
+    {
+      "skill": "C++",
+      "level": "3"
+    },
+    {
+      "skill": "Python",
+      "level": "5"
+    }
   ]
 }

@@ -5,13 +5,15 @@ import LanguageForm from './LanguageForm';
 import ExperienceForm from './ExperienceForm';
 import PropTypes from 'prop-types';
 import EducationForm from './EducationForm';
+import SkillsForm from './SkillsForm';
 
-function MainPanel({ personal, languages, experience, education }) {
+function MainPanel({ personal, languages, experience, education, skills }) {
   const setUserData = (data) => {
     personal.setNewData(data.personal);
     languages.setNewData(data.languages);
     experience.setNewData(data.experience);
     education.setNewData(data.education);
+    skills.setNewData(data.skills);
   };
 
   const handleLoadExample = async ({ src = '/example.json' }) => {
@@ -46,6 +48,7 @@ function MainPanel({ personal, languages, experience, education }) {
     languages.clearData();
     experience.clearData();
     education.clearData();
+    skills.clearData();
   };
 
   return (
@@ -84,6 +87,10 @@ function MainPanel({ personal, languages, experience, education }) {
         items={education}
         generateForm={(edu) => <EducationForm obj={education} toRender={edu} />}
       />
+      <FormBox
+        items={skills}
+        generateForm={(skill) => <SkillsForm obj={skills} toRender={skill} />}
+      />
     </div>
   );
 }
@@ -93,6 +100,7 @@ MainPanel.propTypes = {
   languages: PropTypes.object.isRequired,
   experience: PropTypes.object.isRequired,
   education: PropTypes.object.isRequired,
+  skills: PropTypes.object.isRequired,
 };
 
 export default MainPanel;
