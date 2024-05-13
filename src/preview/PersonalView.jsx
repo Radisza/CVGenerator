@@ -20,7 +20,7 @@ IconText.propTypes = {
 
 function PersonalView({ personal }) {
   return (
-    <div className="CVBox">
+    <div className="flex-column">
       <div className="big-title">{personal.data.fullName}</div>
       <IconText icon="mdi-phone" content={personal.data.phoneNumber} />
       <IconText icon="mdi-alternate-email" content={personal.data.email} />
